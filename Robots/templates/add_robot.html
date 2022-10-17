@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'robot:index' %}">返回</a>
+<br/>
+<form method="POST" action="{% url 'robot:add_robot' %}">
+    机器人编号: <input type="number" name="number"><br/>
+    机器人状态: <input type="text" name="state"><br/>
+    <input type="submit">
+</form>
+</body>
+</html>

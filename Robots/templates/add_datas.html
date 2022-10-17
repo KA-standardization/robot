@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'robot:index' %}">返回</a>
+<br/>
+<form method="post" action="{% url 'robot:add_datas' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="file" multiple="multiple"/>
+    <br/>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

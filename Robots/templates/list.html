@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'robot:index' %}">返回</a>
+<br/>
+<ul>
+    {% for r in robots %}
+        <li>
+            <a href="{% url 'robot:query_rotate_speed' r_num=r.number %}">ID: {{ r.id }}, 编号: {{ r.number }},
+                状态: {{ r.state }}</a>
+            <a href="{% url 'robot:del_robot' r_num=r.number %}">删除</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
